@@ -1,0 +1,10 @@
+.add-icon {position: relative;padding-right: 1.4rem;}
+.add-icon:after {content: " ";position: absolute; width: .8rem;height: .8rem;right: 1rem;top: 50%;transform: translateY(-50%);background-image: url(./../images/common/add.png);background-size: 100%;}
+.icon-search {padding-left: 1.2rem;}
+.icon-search:before {content: " ";position: absolute; width: 1.2rem;height: 1.2rem;left: 0;top: 50%;transform: translateY(-50%);background-image: url(./../images/news/search.png);background-size: 100%;}
+@media screen and (max-width:767px) {
+	.pcshow {display: none !important;}
+}
+@media screen and (min-width:768px) {
+	.mobileshow {display: none !important;}
+}
