@@ -1,12 +1,73 @@
 <template>
   <div class="home">
-      <div class="banner">
+      <div class="banner pcshow">
         <div class="container">
           <swiper :options="swiperOption" ref="mySwiper">
             <!-- slides -->
-            <swiper-slide><img class="bannerimg" src="./../assets/images/home/banner1.png"></swiper-slide>
-            <swiper-slide><img class="bannerimg" src="./../assets/images/home/banner2.png"></swiper-slide>
-            <swiper-slide><img class="bannerimg" src="./../assets/images/home/banner3.png"></swiper-slide>
+            <swiper-slide>
+              <a href="javascript:;">
+                <img class="bannerimg" src="./../assets/images/home/banner1.jpg">
+              </a>
+            </swiper-slide>
+            <swiper-slide>
+              <a href="javascript:;">
+                <div class="context bc2">
+                  <div class="blocktitle">
+                    <div>白求恩潮阳医院<br><span>专业医疗服务体验</span></div>
+                  </div>
+                  <div class="blockbutton">了解更多</div>
+                </div>
+                <img class="bannerimg" src="./../assets/images/home/banner2.jpg">
+              </a>
+            </swiper-slide>
+            <swiper-slide>
+              <a href="javascript:;">
+                <div class="context bc3">
+                  <div class="blocktitle">
+                    <div>人才招聘<br><span>Recruitment</span></div>
+                  </div>
+                  <div class="blockbutton">招聘计划</div>
+                </div>
+                <img class="bannerimg" src="./../assets/images/home/banner3.jpg">
+              </a>
+            </swiper-slide>
+            <!-- Optional controls -->
+            <div class="swiper-pagination"  slot="pagination"></div>
+            <div class="swiper-scrollbar"   slot="scrollbar"><div class="dot left"></div><div class="dot center"></div><div class="dot right"></div></div>
+          </swiper>
+        </div>
+      </div>
+      <div class="banner mobileshow">
+        <div class="container">
+          <swiper :options="swiperOption" ref="mySwiper">
+            <!-- slides -->
+            <swiper-slide>
+              <a href="javascript:;">
+                <img class="bannerimg" src="./../assets/images/home/mbanner1.jpg">
+              </a>
+            </swiper-slide>
+            <swiper-slide>
+              <a href="javascript:;">
+                <div class="context bc2">
+                  <div class="blocktitle">
+                    <div>白求恩潮阳医院<br><span>专业医疗服务体验</span></div>
+                  </div>
+                  <div class="blockbutton">了解更多</div>
+                </div>
+                <img class="bannerimg" src="./../assets/images/home/mbanner2.jpg">
+              </a>
+            </swiper-slide>
+            <swiper-slide>
+              <a href="javascript:;">
+                <div class="context bc3">
+                  <div class="blocktitle">
+                    <div>人才招聘<br><span>Recruitment</span></div>
+                  </div>
+                  <div class="blockbutton">招聘计划</div>
+                </div>
+                <img class="bannerimg" src="./../assets/images/home/mbanner3.jpg">
+              </a>
+            </swiper-slide>
             <!-- Optional controls -->
             <div class="swiper-pagination"  slot="pagination"></div>
             <div class="swiper-scrollbar"   slot="scrollbar"><div class="dot left"></div><div class="dot center"></div><div class="dot right"></div></div>
@@ -23,7 +84,7 @@
       </div>
       <div class="homenews">
         <div class="container">
-          <!-- <img class="bannerimg" src="./../assets/images/home/banner_02.png "> -->
+          <img class="bannerimg" src="./../assets/images/home/newsbg.jpg">
           <div class="context">
             <div class="row">
               <div class="blocktitle">
@@ -121,17 +182,29 @@ a {color: #42b983;}
 .swiper-scrollbar .dot.left {left: 0;}
 .swiper-scrollbar .dot.center {left: 35px;}
 .swiper-scrollbar .dot.right {right: 0;}
-.quicklink {padding: 2rem 0;}
+.quicklink {padding: .5rem 0;}
+.quicklink .container {display: flex;flex-wrap: wrap;padding: .5rem !important;}
+.quicklink .container [class|=col] {padding: .5rem !important;}
 .quicklink img {width: 100%;}
-@media screen and (max-width:767px) {.second {display: none;}}
-.homenews .container {overflow: hidden;position: relative;text-align: center;background-image: url(./../assets/images/home/banner2.png );background-size: 1170px 870px;background-position: center; }
-.homenews img {position: absolute;height: 100%;left: 50%;transform:translateX(-50%);display: inline-block;}
 .homenews .context {position: relative;z-index: 2;color: #fff;padding: 0 3rem;}
+.banner .context {position: absolute;top: 0;left: 50%;transform: translateX(-50%);padding: 2rem 0;}
+.banner .context.bc3 .blocktitle{color: #000;}
+.banner .context.bc3 .blockbutton {color: #000;border-color: #000;}
 .blocktitle {padding: 2rem 0;font-size: 2rem;color: #fff;}
 .blocktitle span {font-size: 1.5rem;}
 .blockbutton {margin-bottom: 2rem;padding: 0 1.5rem;border: 1px solid #fff;height: 3rem;line-height: 3rem;border-radius: 2rem;display: inline-block;font-size: 1.5rem;color: #fff;cursor: pointer;}
-.homenews .new {font-size: 1.2rem;text-align: left;color: #ccc;padding: 1rem 0;border-bottom: 1px solid #c8c8c8;height: 120px;}
+.homenews .new {font-size: 1.2rem;text-align: left;color: #ccc;padding: 1rem 0;border-bottom: 1px solid #c8c8c8;}
 .homenews .new:last-child {border-bottom: 0;}
 .homenews .new .title {font-size: 1.5rem;color: #fff;}
-.enterpriselink .container {overflow: hidden;position: relative;text-align: center;background-image: url(./../assets/images/home/banner3.png );background-size: 1170px 685px;background-position: center; }
+.enterpriselink .container {overflow: hidden;position: relative;text-align: center;background-image: url(./../assets/images/home/ae.jpg );background-size: 100%;background-position: center; }
+.homenews .container {overflow: hidden;position: relative;text-align: center;/*background-image: url(./../assets/images/home/newsbg.jpg );background-size: 100%;background-position: center; */}
+.homenews img {position: absolute;min-height: 100%;min-width:100%;left: 50%;top: 50%;transform:translate(-50%,-50%);display: inline-block;}
+.home .container {width: 100% !important;padding: 0 !important;}
+@media screen and (max-width:767px) {
+  .second {display: none;}
+}
+@media screen and (min-width:768px) {
+.quicklink .container {padding: 2rem !important;}
+.quicklink .container [class|=col] {padding: 2rem !important;}
+}
 </style>

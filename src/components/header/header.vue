@@ -14,13 +14,29 @@
         <nav id="bs-navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li>
-              <router-link :to="{name:'Recruits'}">就医指南</router-link>
+              <router-link :to="{name:'Recruits'}">就医指导</router-link>
             </li>
-            <li>
-              <router-link :to="{name:'Recruits'}">医院概况</router-link>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                医院概况
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">医院简介</a></li>
+                <li><a href="#">医院设计理念</a></li>
+                <li><a href="#">效果图（室外、室内）</a></li>
+              </ul>
             </li>
-            <li class="active">
-              <router-link :to="{name:'Recruits'}">人才招聘</router-link>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                人才招聘
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><router-link :to="{name:'Recruits'}">医师招聘条件</router-link></li>
+                <li><router-link :to="{name:'Recruits'}">护师招聘条件</router-link></li>
+                <li><router-link :to="{name:'Recruits'}">医技科室专业人员招聘条件</router-link></li>
+              </ul>
             </li>
             <li class="logo">
               <router-link :to="{name:'Home'}">  </router-link>
@@ -28,11 +44,19 @@
             <li>
               <router-link :to="{name:'Newscenter'}">新闻中心</router-link>
             </li>
-            <li>
-              <router-link :to="{name:'Recruits'}">联系我们</router-link>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                医院公告
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">医院简介</a></li>
+                <li><a href="#">医院设计理念</a></li>
+                <li><a href="#">效果图（室外、室内）</a></li>
+              </ul>
             </li>
             <li>
-              <router-link :to="{name:'Recruits'}">网站实例</router-link>
+              <router-link :to="{name:'Recruits'}">联系我们</router-link>
             </li>
           </ul>
         </nav>
@@ -61,6 +85,7 @@ export default {
   width: 100%;
   background: #fff;
   box-shadow: 0px 0px 2px 0px #ccc;
+  padding: 1rem 0;
 }
 h1, h2 {
   font-weight: normal;
@@ -75,6 +100,8 @@ ul {
 .navbar-nav>li>a {
   color: #000;
   font-size: 1.2rem;
+  line-height: 2rem;
+  padding: .8rem 1rem;
 }
 .navbar {
   margin-bottom: 0;
@@ -82,6 +109,7 @@ ul {
 .navbar-header {
   position: relative;
   overflow: hidden;
+  margin: 0 !important;
 }
 .navbar-header > span {
   position: absolute;
@@ -100,21 +128,26 @@ ul {
   display: none;
 }
 @media (min-width: 768px){
-.navbar-nav>li {
-  width: 14.2%;
-  height: 100%;
+  .navbar-nav>li {
+    width: 14.2%;
+    height: 100%;
+  }
+  .navbar-collapse .logo {
+    display: block;
+  }
+  .navbar-collapse .logo a:hover {
+    background-color: transparent;
+  }
+  .navbar-collapse{
+    background-image: url(./../../assets/images/home/homelogo.png);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
 }
-.navbar-collapse .logo {
-  display: block;
-}
-.navbar-collapse .logo a:hover {
-  background-color: transparent;
-}
-.navbar-collapse{
-  background-image: url(./../../assets/images/home/homelogo.png);
-  background-size: 30px;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-}
+#mheader .navbar-nav {margin: 0 !important;}
+#mheader .dropdown-menu {width: 100%;}
+
+#mheader .dropdown-menu a{padding: .5rem;text-align: center;}
+#mheader .container {width: 100% !important;padding: 0 !important;}
 </style>
