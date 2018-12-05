@@ -2,7 +2,11 @@
   <div id="newsCenter">
     <div class="blocktitle">新闻中心</div>
     <ul class="recommendList">
-      <li v-for="(item, index) in newsDatas" :key="'news'+index" v-if="item.recommend"><a href="javascript:;">{{item.title}}</a></li>
+      <li v-for="(item, index) in newsDatas" :key="'news'+index" v-if="item.recommend">
+        <router-link :to="{name:'Commondetail',query:{'name':'news',id:item.id}}">
+          {{item.title}}
+        </router-link>
+      </li>
     </ul>
   </div>
 </template>

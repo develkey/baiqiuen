@@ -17,46 +17,22 @@
               <router-link :to="{name:'Recruits'}">就医指导</router-link>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                医院概况
-                <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a href="#">医院简介</a></li>
-                <li><a href="#">医院设计理念</a></li>
-                <li><a href="#">效果图（室外、室内）</a></li>
-              </ul>
+              <router-link :to="{name:'Commondetail',query:{'name':'summary',id:'jj'}}">医院概况</router-link>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                人才招聘
-                <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li><router-link :to="{name:'Recruits'}">医师招聘条件</router-link></li>
-                <li><router-link :to="{name:'Recruits'}">护师招聘条件</router-link></li>
-                <li><router-link :to="{name:'Recruits'}">医技科室专业人员招聘条件</router-link></li>
-              </ul>
+              <router-link :to="{name:'Recruits'}">人才招聘</router-link>
             </li>
             <li class="logo">
               <router-link :to="{name:'Home'}">  </router-link>
             </li>
             <li>
-              <router-link :to="{name:'Newscenter'}">新闻中心</router-link>
+              <router-link :to="{name:'Commonlist', query: {name: 'news'}}">新闻中心</router-link>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                医院公告
-                <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a href="#">医院简介</a></li>
-                <li><a href="#">医院设计理念</a></li>
-                <li><a href="#">效果图（室外、室内）</a></li>
-              </ul>
+              <router-link :to="{name:'Commondetail',query:{'name':'notice',id:'jj'}}">医院公告</router-link>
             </li>
             <li>
-              <router-link :to="{name:'Recruits'}">联系我们</router-link>
+              <router-link :to="{name:'Commondetail',query:{'name':'contact'}}">联系我们</router-link>
             </li>
           </ul>
         </nav>
@@ -126,6 +102,13 @@ ul {
 }
 .navbar-collapse .logo {
   display: none;
+}
+.navbar-nav>li.logo {
+    height: 3.6rem;
+}
+.navbar-nav>li.logo a{
+    height: 100%;
+    background: none;
 }
 @media (min-width: 768px){
   .navbar-nav>li {

@@ -1,6 +1,29 @@
-[
-  {"type":"yw","typeName":"医院要闻"},
-  {"type":"jz","typeName":"建设进展"},
-  {"type":"xj","typeName":"健康宣教"},
-  {"type":"dt","typeName":"社会动态"}
-]
+{
+  "news":[
+    {"type":"yw","typeName":"医院要闻"},
+    {"type":"jz","typeName":"建设进展"},
+    {"type":"xj","typeName":"健康宣教"},
+    {"type":"dt","typeName":"社会动态"}
+  ],
+  "summary":[
+    {"type":"jj","typeName":"医院简介"},
+    {"type":"sjll","typeName":"医院设计理念"},
+    {"type":"jj","typeName":"效果图（室外、室内）"}
+  ],
+  "recruit":[
+    {"type":"ys","typeName":"医师招聘条件"},
+    {"type":"hs","typeName":"护师招聘条件"},
+    {"type":"yj","typeName":"医技科室专业人员招聘条件"}
+  ],
+  "notice":[
+    {"type":"dsj","typeName":"大事记"},
+    {"type":"jz","typeName":"项目进展"}
+  ],
+  "enterprises":[
+    {"type":"gl","typeName":"关联企业"},
+    {"type":"dy","typeName":"对外合作"}
+  ],
+  "contact":[
+    {"type":"lx","typeName":"联系我们"}
+  ]
+}

@@ -10,7 +10,7 @@
               </a>
             </swiper-slide>
             <swiper-slide>
-              <a href="javascript:;">
+              <router-link :to="{name:'Commondetail',query:{'name':'summary',id:'jj'}}">
                 <div class="context bc2">
                   <div class="blocktitle">
                     <div>白求恩潮阳医院<br><span>专业医疗服务体验</span></div>
@@ -18,10 +18,10 @@
                   <div class="blockbutton">了解更多</div>
                 </div>
                 <img class="bannerimg" src="./../assets/images/home/banner2.jpg">
-              </a>
+              </router-link>
             </swiper-slide>
             <swiper-slide>
-              <a href="javascript:;">
+              <router-link :to="{name:'Recruit'}">
                 <div class="context bc3">
                   <div class="blocktitle">
                     <div>人才招聘<br><span>Recruitment</span></div>
@@ -29,7 +29,7 @@
                   <div class="blockbutton">招聘计划</div>
                 </div>
                 <img class="bannerimg" src="./../assets/images/home/banner3.jpg">
-              </a>
+              </router-link>
             </swiper-slide>
             <!-- Optional controls -->
             <div class="swiper-pagination"  slot="pagination"></div>
@@ -138,12 +138,14 @@
 
       <div class="enterpriselink">
         <div class="container">
-          <div class="context">
-            <div class="blocktitle">
-              <div>关联企业<br><span>Associated Enterprises</span></div>
+          <router-link :to="{name:'Commondetail',query:{'name':'enterprises',id:'gl'}}">
+            <div class="context">
+              <div class="blocktitle">
+                <div>关联企业<br><span>Associated Enterprises</span></div>
+              </div>
+              <div class="blockbutton">了解更多</div>
             </div>
-            <div class="blockbutton">了解更多</div>
-          </div>
+          </router-link>
         </div>
       </div>
 
@@ -175,7 +177,7 @@ export default {
 h1, h2 {font-weight: normal;}
 ul {list-style-type: none;padding: 0;}
 li {display: inline-block;margin: 0 10px;}
-a {color: #42b983;}
+a {color: #42b983;text-decoration: none;}
 .bannerimg {display: block;width: 100%;}
 .swiper-scrollbar {width: 100px !important;left: 50% !important;margin-left: -50px;background-color: transparent;}
 .swiper-scrollbar .dot{width: 30px;height: 5px;position: absolute;background-image: url(./../assets/images/home/scrollbarbg.png);background-color: transparent;background-size: 30px 5px;border-radius: 10px;}

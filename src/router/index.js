@@ -36,13 +36,26 @@ export default new Router({
         needKeepAlive: true
       }
     },
-    //  新闻中心
+    //  综合二级菜单列表
     {
-      path: '/newscenter',
-      name: 'Newscenter',
+      path: '/commonlist',
+      name: 'Commonlist',
       // 路由懒加载
       component (resolve) {
-        require(['../components/newscenter/newscenter.vue'], resolve)
+        require(['../components/commonlist/commonlist.vue'], resolve)
+      },
+      // 配置是否需要keep-alive缓存
+      meta: {
+        needKeepAlive: true
+      }
+    },
+    //  综合二级菜单内容页
+    {
+      path: '/commondetail',
+      name: 'Commondetail',
+      // 路由懒加载
+      component (resolve) {
+        require(['../components/commondetail/commondetail.vue'], resolve)
       },
       // 配置是否需要keep-alive缓存
       meta: {
