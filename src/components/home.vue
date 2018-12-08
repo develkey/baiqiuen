@@ -188,6 +188,7 @@ a {color: #42b983;text-decoration: none;}
 .quicklink .container {display: flex;flex-wrap: wrap;padding: .5rem !important;}
 .quicklink .container [class|=col] {padding: .5rem !important;}
 .quicklink img {width: 100%;}
+.quicklink .container:before {display: none;}
 .homenews .context {position: relative;z-index: 2;color: #fff;padding: 0 3rem;}
 .banner .context {position: absolute;top: 0;left: 50%;transform: translateX(-50%);padding: 2rem 0;}
 .banner .context.bc3 .blocktitle{color: #000;}

@@ -20,12 +20,14 @@
           <div class="col-xs-12 col-sm-9 noright">
             <ul class="recruitlist">
               <li v-for="(item, index) in recruitsDatas" :key="'recruits'+index" :class="item.section">
-                <div class="postDesc">
-                  <div class="post">{{item.post}}</div>
-                  <div class="location">{{item.location}}</div>
-                  <div class="date">{{item.date}}</div>
-                </div>
-                <div class="applyBtn">提交简历</div>
+                <router-link :to="{name:'Commondetail',query:{'name':'recruit',id:item.type}}">
+                  <div class="postDesc">
+                    <div class="post">{{item.post}}</div>
+                    <div class="location">{{item.location}}</div>
+                    <div class="date">{{item.date}}</div>
+                  </div>
+                  <div class="applyBtn">提交简历</div>
+                </router-link>
               </li>
             </ul>
           </div>
@@ -57,6 +59,7 @@ export default {
 #recruits {
   background-image: url(./../../assets/images/recruit/bg.png);background-size: 100%;padding: 4rem 0;
 }
+#recruits a {text-decoration: none;}
 #recruits .container {background-color: #fff;padding: 0 3rem;}
 #recruits .titleBlock {position: relative;}
 #recruits .mobilebg {display: block;width: 100%;}

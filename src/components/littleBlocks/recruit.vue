@@ -1,17 +1,21 @@
 <template>
   <div id="recruit">
     <ul class="recommendList">
-      <li v-for="(item, index) in recruitsDatas" :key="'recruit'+index"><a href="javascript:;" class="add-icon">{{item.section}}</a></li>
+      <li v-for="(item, index) in recruitsDatas" :key="'recruit'+index">
+        <router-link :to="{name:'Commondetail',query:{'name':'recruit',id:item.type}}" :class="'add-icon'">
+          {{item.typeName}}
+        </router-link>
+      </li>
     </ul>
   </div>
 </template>
 <script>
-import recruitsData from './../../assets/datas/recruits.json'
+import recruitsData from './../../assets/datas/newstypes.json'
 export default {
   name: 'recruits',
   data () {
     return {
-      recruitsDatas: recruitsData
+      recruitsDatas: recruitsData['recruit']
     }
   }
 }

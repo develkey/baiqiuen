@@ -3,7 +3,7 @@
     <header class="navbar navbar-static-top bs-docs-nav" id="top">
       <div class="container">
         <div class="navbar-header">
-          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+          <button id="navbarBtn" class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -11,7 +11,7 @@
           </button>
           <span>白求恩潮阳医院</span>
         </div>
-        <nav id="bs-navbar" class="collapse navbar-collapse">
+        <nav id="bs-navbar" class="collapse navbar-collapse" v-on:click="navbarClose">
           <ul class="nav navbar-nav">
             <li>
               <router-link :to="{name:'Recruits'}">就医指导</router-link>
@@ -46,7 +46,11 @@ export default {
   name: 'mheader',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  methods: {
+    navbarClose () {
+      document.getElementById('navbarBtn').click()
     }
   }
 }
