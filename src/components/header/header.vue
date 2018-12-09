@@ -50,7 +50,8 @@ export default {
   },
   methods: {
     navbarClose () {
-      document.getElementById('navbarBtn').click()
+      var btn = document.querySelectorAll('#navbarBtn')[0]
+      if (btn.offsetWidth !== 0) btn.click()
     }
   }
 }
